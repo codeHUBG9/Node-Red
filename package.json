@@ -1,0 +1,12 @@
+{
+    "name": "Play-with-Node-red",
+    "description": "This is my first Node-red project, I'm sure , will learn lots from this. I am very excited to learn Node-red.",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}
