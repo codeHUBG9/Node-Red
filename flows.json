@@ -16,7 +16,42 @@
         "env": []
     },
     {
-        "id": "314b7a078aac9cb4",
+        "id": "56a71167f845cefd",
+        "type": "debug",
+        "z": "2ba9d24c579d9fef",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "e1f1fd321b3bea9a",
+        "type": "function",
+        "z": "2ba9d24c579d9fef",
+        "name": "Hello wrold",
+        "func": "var sum = 324+4355;\nmsg.payload = sum.toString();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "56a71167f845cefd"
+            ]
+        ]
+    },
+    {
+        "id": "58756d596a22680f",
         "type": "inject",
         "z": "2ba9d24c579d9fef",
         "name": "",
@@ -37,18 +72,47 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 140,
+        "y": 120,
         "wires": [
             [
-                "79ed70bcb0657beb"
+                "e1f1fd321b3bea9a"
             ]
         ]
     },
     {
-        "id": "79ed70bcb0657beb",
+        "id": "1688eb8f25bea068",
+        "type": "inject",
+        "z": "870d65ae71670ed1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 100,
+        "wires": [
+            [
+                "c95982545e5d651b"
+            ]
+        ]
+    },
+    {
+        "id": "c95982545e5d651b",
         "type": "debug",
-        "z": "2ba9d24c579d9fef",
-        "name": "debug 1",
+        "z": "870d65ae71670ed1",
+        "name": "debug 2",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -57,7 +121,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 320,
-        "y": 140,
+        "y": 100,
         "wires": []
     }
 ]
